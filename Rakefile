@@ -32,7 +32,7 @@ end
 desc 'Build docs'
 Rake::RDocTask.new do |t|
   t.main = 'README.md'
-  t.title = "Webhookr Mailchimp #{version}"
+  t.title = "Webhookr Mandrill #{version}"
   t.rdoc_dir = 'doc'
   t.rdoc_files.include('README.md', 'MIT-LICENSE', 'lib/**/*.rb')
 end
