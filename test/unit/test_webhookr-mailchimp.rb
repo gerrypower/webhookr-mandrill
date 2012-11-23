@@ -32,16 +32,6 @@ describe Webhookr::Mandrill::Adapter do
       }.must_be_silent
     end
 
-    it "should return the correct event type" do
-      response = subject.process(@valid_response).first
-      assert_equal(@event_type, response.event_type)
-    end
-
-    it "should return the correct data packet" do
-      response = subject.process(@valid_response).first
-      assert_equal("gerry+agent1@zoocasa.com", response.payload.msg.email)
-    end
-
     it "should raise Webhookr::InvalidPayloadError for no packet" do
       lambda {
         subject.process("")
@@ -60,6 +50,42 @@ describe Webhookr::Mandrill::Adapter do
       }.must_raise(Webhookr::InvalidPayloadError)
     end
 
+  end
+
+  describe "it's response" do
+    before do
+      @adapter = Webhookr::Mandrill::Adapter.new
+    end
+
+    subject { @adapter.process(@valid_response).first }
+
+    it "must respond to service_name" do
+      subject.must_respond_to(:service_name)
+    end
+
+    it "should return the correct service name" do
+      assert_equal(Webhookr::Mandrill::Adapter::SERVICE_NAME, subject.service_name)
+    end
+
+    it "must respond to event_type" do
+      subject.must_respond_to(:event_type)
+    end
+
+    it "should return the correct event type" do
+      assert_equal(@event_type, subject.event_type)
+    end
+
+    it "must respond to payload" do
+      subject.must_respond_to(:payload)
+    end
+
+    it "must respond to payload.msg" do
+      subject.payload.must_respond_to(:msg)
+    end
+
+    it "should return the correct data packet" do
+      assert_equal("gerry+agent1@zoocasa.com", subject.payload.msg.email)
+    end
   end
 
 end
