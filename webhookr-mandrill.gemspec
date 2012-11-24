@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
+  gem.add_dependency("webhookr")
   gem.add_dependency("activesupport", ["~> 3.1"])
   # Until the latest version gets to Rubygems
   # gem.add_dependency("recursive-open-struct")
