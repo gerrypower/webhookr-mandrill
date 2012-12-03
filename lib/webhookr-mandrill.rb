@@ -1,6 +1,7 @@
-require "webhookr"
-require "active_support/core_ext/module/attribute_accessors"
-require "recursive_open_struct"
+require "rubygems"
+require "bundler"
+Bundler.require(:default)
+
 require "CGI"
 
 module Webhookr
