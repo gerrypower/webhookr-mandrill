@@ -20,7 +20,9 @@ module Webhookr
       def process(raw_response)
         Array.wrap(parse(raw_response)).collect do |p|
           Webhookr::AdapterResponse.new(
-            SERVICE_NAME, p.fetch(EVENT_KEY), RecursiveOpenStruct.new(p)
+            SERVICE_NAME,
+            p.fetch(EVENT_KEY),
+            RecursiveOpenStruct.new(p, :recurse_over_arrays => true)
           ) if assert_valid_packet(p)
         end
       end
