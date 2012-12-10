@@ -1,5 +1,5 @@
 
-$: << File.join(File.dirname(__FILE__), %w{ .. .. })
+$: << File.join(File.dirname(__FILE__), %w{ .. .. .. })
 require 'test_helper'
 require 'generators/webhookr/mandrill/init_generator'
 
