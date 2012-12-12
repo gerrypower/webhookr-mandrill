@@ -1,8 +1,6 @@
-require "rubygems"
-require "bundler"
-Bundler.require(:default)
-
-require "CGI"
+require "webhookr"
+require "webhookr-mandrill/version"
+require "webhookr/ostruct_utils"
 
 module Webhookr
   module Mandrill
@@ -22,7 +20,7 @@ module Webhookr
           Webhookr::AdapterResponse.new(
             SERVICE_NAME,
             p.fetch(EVENT_KEY),
-            RecursiveOpenStruct.new(p, :recurse_over_arrays => true)
+            OstructUtils.to_ostruct(p)
           ) if assert_valid_packet(p)
         end
       end
