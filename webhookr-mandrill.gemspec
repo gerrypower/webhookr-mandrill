@@ -19,12 +19,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency("webhookr")
   gem.add_dependency("activesupport", ["~> 3.1"])
-  # Until the latest version gets to Rubygems
-  # gem.add_dependency("recursive-open-struct")
-  gem.add_development_dependency("rake")
-  gem.add_development_dependency("minitest")
-  gem.add_development_dependency("guard")
-  gem.add_development_dependency("guard-minitest")
-  gem.add_development_dependency("rb-fsevent")
 
 end
