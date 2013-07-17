@@ -11,6 +11,14 @@ guard 'minitest', :test_folders => 'test', :test_file_patterns => '*_tests.rb' d
   end
 end
 
+guard 'markdown', :convert_on_start => true do
+ watch ('README.md') { "./README.md|./README.html" }
+end
+
+guard 'livereload' do
+  watch('README.html')
+end
+
 if File.exists?('Guardfile.local')
   instance_eval File.read('Guardfile.local')
 end
