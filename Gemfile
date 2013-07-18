@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gemspec
 
 group :development, :test do
-  gem "rails", "~> 3.1"
-  gem "rake", "~> 10.0"
+  gem "rails", ">= 3.1"
+  gem "rake", ">= 10.0"
   gem "minitest"
   gem "minitest-reporters"
   gem "em-websocket"
