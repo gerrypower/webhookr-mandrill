@@ -1,5 +1,8 @@
 require 'simplecov'
+require 'coveralls'
+
 SimpleCov.start
+Coveralls.wear!
 
 require 'minitest/autorun'
 require 'minitest/reporters'
