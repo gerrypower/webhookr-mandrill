@@ -1,7 +1,7 @@
 # Webhookr::Mandrill
-[![Build Status](https://travis-ci.org/zoocasa/webhookr-mandrill.png?branch=master)](https://travis-ci.org/zoocasa/webhookr-mandrill)
-[![Dependency Status](https://gemnasium.com/zoocasa/webhookr-mandrill.png)](https://gemnasium.com/zoocasa/webhookr-mandrill)
-[![Code Climate](https://codeclimate.com/github/zoocasa/webhookr-mandrill.png)](https://codeclimate.com/github/zoocasa/webhookr-mandrill)
+[![Build Status](https://travis-ci.org/gerrypower/webhookr-mandrill.png?branch=master)](https://travis-ci.org/gerrypower/webhookr-mandrill)
+[![Dependency Status](https://gemnasium.com/gerrypower/webhookr-mandrill.png)](https://gemnasium.com/gerrypower/webhookr-mandrill)
+[![Code Climate](https://codeclimate.com/repos/51e81bd356b10253cd00e367/badges/3f65f77018889c315542/gpa.png)](https://codeclimate.com/repos/51e81bd356b10253cd00e367/feed)
 
 This gem is a plugin for [Webhookr](https://github.com/zoocasa/webhookr) that enables
 your application to accept [webhooks from Mandrill](http://help.mandrill.com/entries/21738186-Introduction-to-Webhooks).
