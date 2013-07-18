@@ -16,6 +16,12 @@ Or install it yourself:
 
     $ gem install webhookr-mandrill
 
+[webhookr](https://github.com/zoocasa/webhookr) is installed as a dependency of webhookr-mandrill. If you have not [setup Webhookr](https://github.com/zoocasa/webhookr#usage--setup), do so now:
+
+```console
+rails g webhookr:add_route
+```
+
 ## Usage
 
 Once you have the gem installed run the generator to add the code to your initializer.
