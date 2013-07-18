@@ -7,10 +7,10 @@ Gem::Specification.new do |gem|
   gem.name          = "webhookr-mandrill"
   gem.version       = Webhookr::Mandrill::VERSION
   gem.authors       = ["Gerry Power"]
-  gem.email         = ["code@zoocasa.com"]
+  gem.email         = ["gerry@thepowerhouse.com"]
   gem.description   = "A webhookr extension to support Mandrill webhooks."
   gem.summary       = gem.description
-  gem.homepage      = "http://github.com/zoocasa/webhookr-mandrill"
+  gem.homepage      = "http://github.com/gerrypower/webhookr-mandrill"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
