@@ -2,9 +2,6 @@
 # -*- ruby -*-
 
 require 'rubygems'
-
-gem 'rdoc', '~> 3.12'
-
 require 'rubygems/package_task'
 require 'rake/testtask'
 require 'rdoc/task'
