@@ -43,9 +43,9 @@ to handle unsubscribes you would create a class as follows:
 
 ```ruby
 class mandrillHooks
-  def on_unsubscribe(incoming)
+  def on_spam(incoming)
     # Your custom logic goes here.
-    User.unsubscribe_newletter(incoming.payload.data.email)
+    User.unsubscribe_newletter(incoming.payload.msg.email)
   end
 end
 ```
@@ -53,15 +53,15 @@ end
 For a complete list of events, and the payload format, see below.
 
 Edit config/initializers/*initializer_name* and change the commented line to point to
-your custom Mandrill event handling class. If your class was called *mandrillHooks*
+your custom Mandrill event handling class. If your class was called *MandrillHooks*
 the configuration line would look like this:
 
 ```ruby
-  Webhookr::Mandrill::Adapter.config.callback = mandrillHooks
+  Webhookr::Mandrill::Adapter.config.callback = MandrillHooks
 ```
 
-To see the list of Mandrill URLs your application can use when you [configure
-mandrill](https://mandrillapp.com/settings/webhooks) webhooks,
+To see the list of Mandrill URLs your application can use when you configure
+mandrill webhooks,
 run the provided webhookr rake task:
 
 ```console
@@ -129,17 +129,17 @@ The payload is the full payload data from as per the
 for ease of access. Examples for the method call unsubscribe:
 
 ```ruby
-  incoming.msg._id
-  incoming.msg.ts
-  incoming.msg.email
-  incoming.msg.sender
-  incoming.msg.subject
-  incoming.msg.opens
-  incoming.msg.tags
-  incoming.msg.state
-  incoming.msg.diag
-  incoming.msg.bounce_description
-  incoming.msg.template
+  incoming.payload.msg._id
+  incoming.payload.msg.ts
+  incoming.payload.msg.email
+  incoming.payload.msg.sender
+  incoming.payload.msg.subject
+  incoming.payload.msg.opens
+  incoming.payload.msg.tags
+  incoming.payload.msg.state
+  incoming.payload.msg.diag
+  incoming.payload.msg.bounce_description
+  incoming.payload.msg.template
 
 ```
 
