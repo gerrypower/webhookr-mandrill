@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = "A webhookr extension to support Mandrill webhooks."
   gem.summary       = gem.description
   gem.homepage      = "http://github.com/gerrypower/webhookr-mandrill"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
