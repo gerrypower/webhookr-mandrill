@@ -1,7 +1,7 @@
 # Webhookr::Mandrill
 [![Build Status](https://travis-ci.org/gerrypower/webhookr-mandrill.png?branch=master)](https://travis-ci.org/gerrypower/webhookr-mandrill)
 [![Dependency Status](https://gemnasium.com/gerrypower/webhookr-mandrill.png)](https://gemnasium.com/gerrypower/webhookr-mandrill)
-[![Code Climate](https://codeclimate.com/repos/51e81bd356b10253cd00e367/badges/3f65f77018889c315542/gpa.png)](https://codeclimate.com/repos/51e81bd356b10253cd00e367/feed)
+[![Code Climate](https://codeclimate.com/github/gerrypower/webhookr-mandrill.png)](https://codeclimate.com/github/gerrypower/webhookr-mandrill)
 [![Coverage Status](https://coveralls.io/repos/gerrypower/webhookr-mandrill/badge.png?branch=master)](https://coveralls.io/r/gerrypower/webhookr-mandrill?branch=master)
 
 This gem is a plugin for [Webhookr](https://github.com/zoocasa/webhookr) that enables
